@@ -43,11 +43,11 @@ func (r RouterAccount) Handle(router *gin.Engine) {
 		r.AccountRequestHandler.LoginAccount,
 	)
 
-	account.PATCH("/verify/:id",
+	account.PUT("/verify/:id",
 		r.AccountRequestHandler.VerifyAccount,
 	)
 
-	account.PATCH("/activate/:id",
+	account.PUT("/activate/:id",
 		r.AccountRequestHandler.ActivateAccount,
 	)
 }
